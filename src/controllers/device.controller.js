@@ -1,8 +1,8 @@
 const Device = require('../models/device.model');
 
 async function store(req, res) {
-    const { ip, pwd } = req.body;
-    const device = new Device({ ip, pwd });
+    const { ip, pwd, deviceInfo } = req.body;
+    const device = new Device({ ip, pwd, deviceInfo });
 
     try {
         await device.save();
